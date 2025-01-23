@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Whispers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="search.css">
+
+<style>
+.swiper-button-next, .swiper-button-prev{
+    border: var(--border-hover);
+    height: 3rem;
+    width: 3rem;
+    color: var(--black);
+    background: #fff;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    background: var(--black);
+    color: #fff;
+}
+
+.item img, .wishlist-item img{
+            height: 10rem;
+            width: auto;
+}
+        
+.item , .wishlist-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+}
+p, ul, .link{
+            font-size: 1.3rem;
+            color: black;
+            
+}
+.cart a, .wishlist a, .orders a{
+            font-size: 1.5rem;
+            color: palevioletred;
+}
+.wishlist, .cart, .orders {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-radius: 8px;
+}
+.wishlist-item, .item {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
+            border-radius: 5px;
+        }
+.wishlist-item:hover, .item:hover {
+            cursor: pointer;
+            transform: scale(.95);
+}
+.wishlist-item button, .cart button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+}
+.wishlist-item button:hover, .cart button:hover {
+            background-color: red;
+}
+
+.privacyPolicy {
+            margin-bottom: 20px;
+}
+.privacyPolicy-container .info{
+            padding-bottom: 2.5rem;
+}
+.privacyPolicy .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+}
+.privacyPolicy .content h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+}
+
+.privacyPolicy .content ul {
+            margin: 0;
+            padding-left: 20px;
+}
+.privacyPolicy .content ul li {
+            margin-bottom: 5px;
+}
+.privacyPolicy .content i {
+            font-size: 2rem;
+            color: #4caf50;
+            margin-right: 10px;
+}
+</style>
+</head>
+
+
+<body>
+    <header class = "header">
+        <div class="header-1">
+            <div class="logo"> <i class="fa-solid fa-spa"></i> Garden Whispers</div>
+        </div>
+    <div class="header-2">
+        <div class="navbar">
+            <div class="nav-links" id="navLinks">
+              <a href="#about">about</a>
+              <a href="#cart">cart</a>
+              <a href="#wishlist">wishlist</a>
+              <a href="#orders">orders</a>
+              <a href="#policy">policy</a>
+              <a href="./index.html">Back</a>
+            </div>
+        </div>
+    </div>
+
+        <nav class="bottom-navbar">
+            <a href="#about" class="fas fa-search"></a>
+              <a href="#cart" class="fas fa-shopping-cart"></a>
+              <a href="#wishlist" class="fas fa-heart"></a>
+              <a href="#orders" class="fa-solid fa-box-open"></a>
+              <a href="#policy" class="fa-solid fa-square-check"></a>
+              <a href="./index.html"  class="fa-solid fa-backward-step"></a>
+        </nav>
+    
+</header>
+
+<section class="about" id="about">
+    <h1 class="heading"> <span>about</span></h1>
+    <div class="swiper about-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G12-removebg-preview.png" alt="peony">
+                </div>
+                <div class="content">
+                    <h3 id="peony">peony</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 2500+ this month!</div>
+                    <div class="price">₹209.99 <span>₹279.99</span></div>
+                    <p>Known for its lush, full blooms and delicate fragrance, 
+                       the peony symbolizes romance, prosperity, and good fortune.
+                   </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G02-removebg-preview.png" alt="tulip">
+                </div>
+                <div class="content">
+                    <h3 id="tulip">Tulip</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 700+ this month!</div>
+                    <div class="price">₹239.99 <span>₹319.99</span></div>
+                    <p>A classic spring flower, tulips come in a variety of colors and 
+                        represent deep love, elegance, and perfect beauty.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G19.webp" alt="rose">
+                </div>
+                <div class="content">
+                    <h3 id="rose">rose</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 2700+ this month!</div>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <p> With its vibrant, clustered blooms, 
+                        hydrangeas symbolize gratitude, grace, and heartfelt emotions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G08-removebg-preview.png" alt="blue orchid">
+                </div>
+                <div class="content">
+                    <h3 id="blue">blue orchid</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 300+ this month!</div>
+                    <div class="price">₹174.99 <span>₹199.99</span></div>
+                    <p>Rare and exotic, blue orchids signify strength, beauty, and 
+                    uniqueness, making them a symbol of admiration.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G04-removebg-preview (1).png" alt="sunflower">
+                </div>
+                <div class="content">
+                    <h3 id="sunflower">sunflower</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 1000+ this month!</div>
+                    <div class="price">₹136.24 <span>₹179.99</span></div>
+                    <p>Known for their sunny, golden faces, sunflowers represent warmth, adoration, 
+                    and positivity, often turning toward the sun.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G03-removebg-preview.png" alt="poppy">
+                </div>
+                <div class="content">
+                    <h3 id="poppy">poppy</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 500+ this month!</div>
+                    <div class="price">₹131.24 <span>₹174.99</span></div>
+                    <p>A delicate flower, the poppy symbolizes remembrance, peace, 
+                    and consolation, especially in wartime commemorations.
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G16-removebg-preview.png" alt="dahlia">
+                </div>
+                <div class="content">
+                    <h3 id="dahlia">Dahlia</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <div class="views">viewed by over 900+ this month!</div>
+                    <div class="price">₹209.99 <span>₹279.99</span></div>
+                    <p>With its intricate layers of petals, dahlias symbolize elegance, creativity, inner strength, 
+                    and a lasting bond, dahlias represent the beauty of love. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G21-removebg-preview.png" alt="marigold">
+                </div>
+                <div class="content">
+                    <h3 id="marigold">marigold</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <div class="views">viewed by over 600+ this month!</div>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <p>Marigolds, with their vibrant golden hues, symbolize warmth, passion, and creativity. 
+                       Known as "herbs of the sun," they bring a touch of timeless beauty to any setting. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G11-removebg-preview.png"  alt="lavender">
+                </div>
+                <div class="content">
+                    <h3 id="lavender">lavender</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 400+ this month!</div>
+                    <div class="price">₹174.99 <span>₹199.99</span></div>
+                    <p>Lavender, with its delicate purple blooms and enchanting fragrance, 
+                        embodies elegance and tranquility. A timeless symbol 
+                        of grace and serenity, it soothes both the senses and the soul.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G20-removebg-preview.png" alt="haory">
+                </div>
+                <div class="content">
+                    <h3 id="haory">haory</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 800+ this month!</div>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <p>Often called the wax plant, Hoya features thick, glossy leaves and 
+                        star-shaped fragrant flowers, symbolizing lasting love and protection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G17-removebg-preview.png" alt="hydrangea">
+                </div>
+                <div class="content">
+                    <h3 id="hydrangea"> hydrangea</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 2800+ this month!</div>
+                    <div class="price">₹134.99 <span>₹179.99</span></div>
+                    <p> With its vibrant, clustered blooms, 
+                        hydrangeas symbolize gratitude, grace, and heartfelt emotions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="images/G10-removebg-preview.png" alt="Chrysanthemum">
+                </div>
+                <div class="content">
+                    <h3 id="chrysanthemum">Chrysanthemum</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="views">viewed by over 1200+ this month!</div>
+                    <div class="price">₹131.24 <span>₹174.99</span></div>
+                    <p>Popular in many cultures, chrysanthemums symbolize longevity, joy, 
+                    and fidelity, often used to honor loved ones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<sction class="cart" id="cart">
+    <h1 class="heading"> <span>your cart</span></h1>
+    <div class="cart" id="cart-container"></div>
+    <a href="./index.html">Back to Shop</a>
+</sction>
+
+<section class="wishlist" id="wishlist">
+   <h1 class="heading"><span>Wishlist</span></h1>
+   <div class="wishlist" id="wishlist-container"></div>
+   <a href="./index.html">Back to Shop</a>
+</section>
+
+
+<section class="orders" id="orders">
+    <h1 class="heading"><span>your Orders</span></h1>
+    <div class="orders" id="orders-container"></div>
+    <a href="./index.html">Back to Shop</a>
+</section>
+
+
+<section class="privacyPolicy-container" id="policy">
+    <h1 class="heading"><span>Privacy Policy</span></h1>
+    <div class="info">
+    <p> Effective Date: [27th November 2024] <br>
+        Last Updated: [16th January 2025] <br> <br>
+        At Garden Whispers, we value your privacy and are committed to protecting your personal information. 
+        This Privacy Policy outlines how we collect, use, and safeguard your data when you visit or interact with our website.
+    </p>
+    </div>
+
+    <div class="privacyPolicy">
+        <div class="content">
+            <i class="fa-solid fa-user"></i>
+            <div>
+                <h3>Information We Collect</h3>
+                <p>We may collect the following types of information: <br>
+                    <ul>
+                    <li>Personal Information: Name, email address, phone number, and shipping address 
+                        when you make a purchase or create an account.</li>
+                    <li>Payment Information: Necessary details to process payments securely.</li>
+                    <li>Browsing Information: Cookies, IP addresses, and device details to improve your browsing experience.</li>
+                </ul></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacyPolicy">
+        <div class="content">
+            <i class="fa-solid fa-gear"></i>
+            <div>
+                <h3>How We Use Your Information</h3>
+                <p>We use your data to: <br>
+                    <ul>
+                    <li>Process your orders and deliver products.</li>
+                    <li>Send updates, promotions, or newsletters (with your consent).</li>
+                    <li>Improve our website functionality and enhance customer experience.</li>
+                    <li>Detect and prevent fraudulent transactions.</li>
+                </ul></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacyPolicy">
+        <div class="content">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+                <h3>Your Rights</h3>
+                <p>You have the right to: <br>
+                    <ul>
+                    <li>Access, update, or delete your personal data.</li>
+                    <li>Opt out of receiving promotional communications.</li>
+                    <li>Request a copy of your stored information.</li>
+                </ul>
+                <div class="link">To exercise these rights, please contact us <a href="./index.html#contactUs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacyPolicy">
+        <div class="content">
+            <i class="fa-solid fa-shield"></i>
+            <div>
+                <h3>Data Security</h3>
+                <p>We implement robust measures to protect your personal information, 
+                    including encryption and secure payment gateways. While we strive to safeguard your data, 
+                    no method is entirely foolproof.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacyPolicy">
+        <div class="content">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+                <h3>Updates to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. 
+                    Significant changes will be notified on our website.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick access</h3>
+            <a href="#about"><i class="fas fa-arrow-right"></i>about</a>
+              <a href="#cart"><i class="fas fa-arrow-right"></i>cart</a>
+              <a href="#wishlist"><i class="fas fa-arrow-right"></i>wishlist</a>
+              <a href="#orders"><i class="fas fa-arrow-right"></i>orders</a>
+              <a href="#policy"><i class="fas fa-arrow-right"></i>policy</a>
+              <a href="./index.html"><i class="fas fa-arrow-right"></i>go back</a>
+        </div>
+</div>
+<div class="credit">all rights reserved! <i class="fa-regular fa-copyright"></i></div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./search.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Whispers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class = "header">
+        <div class="header-1">
+
+            <div class="logo"> <i class="fa-solid fa-spa"></i> Garden Whispers</div>
+
+            <form action="javascript:void(0);" class="search-from" onsubmit="redirectToSlider()">
+                <input type="text" id="searchInput" placeholder="Enter flower name" />
+                <button type="submit" id="search" class="fas fa-search"></button>
+            </form>
+            
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="./search.html#liked" id="heart-btn" class="fas fa-heart"></a>
+                <a href="./search.html#cart" id="shopping-cart-btn" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#featured">featured</a>
+            <a href="#arrivals">new arrivals</a>
+            <a href="#more">more</a>
+            <a href="#reviews">reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#more" class="fas fa-solid fa-spa"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+    </nav>
+
+
+   <div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times"></div>
+
+    <form action="">
+        <h3>sign in</h3>
+       <span>username</span>
+       <input type="email" name="" class="swiper-box" placeholder="Enter your email" id="">
+       <span>password</span>
+       <input type="password" name="" class="swiper-box" placeholder="Enter your password" id="">
+
+       <div class="checkswiper-box">
+        <input type="checkswiper-box" name="" id="remember-me">
+        <label for="remember-me">remember me</label>
+       </div>
+
+       <input type="submit" value="sign in" class="btn">
+       <p>forgot password? <a href="http://">click here</a></p>
+       <p>don't have an account? <a href="http://">create</a></p>
+
+    </form>
+   </div>  
+   
+   <section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <p>Where every bloom tells a timeless story 
+                <br/> and every petal whispers eternal love</p>
+                <h3>upto 25% off</h3>
+                <p>From our garden to your heart</p>
+            <a href="#arrivals" class="btn">shop now</a>
+        </div>
+
+        <div class="swiper flower-slider">
+            <div class="swiper-wrapper">
+           <div class="swiper-slide"><img src="./images/G01-removebg-preview (1).png" alt="Cosmos"></div> 
+           <div class="swiper-slide"><img src="./images/G02-removebg-preview.png"  alt="Tulip"></div> 
+            <div class="swiper-slide"><img src="./images/G04-removebg-preview (1).png" alt="Sunflower"></div> 
+            <div class="swiper-slide"><img src="./images/G03-removebg-preview.png" alt="Poppy"></div> 
+            <div class="swiper-slide"><img src="./images/G12-removebg-preview.png" alt="Marigold"></div> 
+            <div class="swiper-slide"><img src="./images/G06-removebg-preview.png" alt="Lily"></div> 
+            <div class="swiper-slide"><img src="./images/G07-removebg-preview.png" alt="Daisy"></div> 
+            <div class="swiper-slide"><img src="./images/G08-removebg-preview.png" alt="Orchid"></div> 
+            <div class="swiper-slide"><img src="./images/G09-removebg-preview.png" alt="Jasmine"></div> 
+            <div class="swiper-slide"><img src="./images/G10-removebg-preview.png" alt="Chrysanthemum"></div> 
+            <div class="swiper-slide"><img src="./images/G11-removebg-preview.png" alt="Lavender"></div> 
+            <div class="swiper-slide"><img src="./images/G12-removebg-preview.png" alt="Peony"></div> 
+            <div class="swiper-slide"><img src="./images/G13-removebg-preview.png" alt="Carnation"></div> 
+            <div class="swiper-slide"><img src="./images/G14-removebg-preview.png" alt="Lotus"></div> 
+            <div class="swiper-slide"><img src="./images/G15-removebg-preview.png" alt="Begonia"></div> 
+            <div class="swiper-slide"><img src="./images/G16-removebg-preview.png"alt="Dahlia"></div> 
+            <div class="swiper-slide"><img src="./images/G17-removebg-preview.png" alt="Hydrangea"></div> 
+            <div class="swiper-slide"><img src="./images/G18-removebg-preview.png" alt="Gardenia"></div> 
+            <div class="swiper-slide"><img src="./images/G19.webp" alt="Rose"></div> 
+            <div class="swiper-slide"><img src="./images/G20-removebg-preview.png" alt="Pink"></div> 
+            <div class="swiper-slide"><img src="./images/G21-removebg-preview.png" alt="Marigold"></div> 
+            </div>
+        </div>
+    </div>  
+   </section>
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div class="content">
+            <h3>free shipping</h3>
+            <p>orders over ₹800</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+            <h3>secure payment</h3>
+            <p>100% secure payments</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+            <h3>easy return</h3>
+            <p>10 days return</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hand-holding-dollar"></i>
+        <div class="content">
+            <h3> Refund & replacement </h3>
+            <p> within 7 days get your money</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+            <h3>24/7 support</h3>
+            <p>call us anytime</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class=" fas fa-solid fa-gift"></i>
+        <div class="content">
+            <h3>Personalized offerings</h3> 
+            <p>build your own bouquet with Personalized Messages</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-leaf"></i>
+        <div class="content">
+            <h3>fresh Flowers</h3>
+            <p>Delivering fresh flowers to your doorstep</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-boxes-packing"></i>
+        <div class="content">
+            <h3>Eco-Friendly Packaging</h3>
+            <p>we use recyclable packaging materials</p>
+        </div>
+    </div>
+   </section>
+
+<section class="featured" id="featured">
+    <h1 class="heading"> <span>featured</span></h1>
+
+    <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#blue" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Blue Orchid', 'images/G08-removebg-preview.png', '₹174.99')"></button>
+                    <a href="./search.html#blue" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G08-removebg-preview.png" alt="Blue Orchid">
+                </div>
+                <div class="content">
+                    <h3>Blue Orchid</h3>
+                    <div class="price">₹174.99 <span>₹199.99</span></div>
+                    <button class="btn" onclick="addToCart('Blue Orchid', '₹174.99', 'images/G08-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#peony" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Peony', 'images/G12-removebg-preview.png', '₹209.99')"></button>
+                    <a href="./search.html#peony" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G12-removebg-preview.png" alt="Peony">
+                </div>
+                <div class="content">
+                    <h3>Peony</h3>
+                    <div class="price">₹209.99 <span>₹279.99</span></div>
+                    <button class="btn" onclick="addToCart('Peony', '₹209.99', 'images/G12-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#tulip" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Tulip', 'images/G02-removebg-preview.png', '₹239.99')"></button>
+                    <a href="./search.html#tulip" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G02-removebg-preview.png" alt="Tulip">
+                </div>
+                <div class="content">
+                    <h3>Tulip</h3>
+                    <div class="price">₹239.99 <span>₹319.99</span></div>
+                    <button class="btn" onclick="addToCart('Tulip', '₹239.99', 'images/G02-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#lavender" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Lavender', 'images/G11-removebg-preview.png', '₹174.99')"></button>
+                    <a href="./search.html#lavender" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G11-removebg-preview.png" alt="lavender">
+                </div>
+                <div class="content">
+                    <h3>lavender</h3>
+                    <div class="price">₹174.99 <span>₹199.99</span></div>
+                    <button class="btn" onclick="addToCart('Lavender', '₹174.99', 'images/G11-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#hydrangea" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Hydrangea', 'images/G17-removebg-preview.png', '₹134.99')"></button>
+                    <a href="./search.html#hydrangea" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G17-removebg-preview.png" alt="Hydrangea">
+                </div>
+                <div class="content">
+                    <h3>Hydrangea</h3>
+                    <div class="price">₹134.99 <span>₹179.99</span></div>
+                    <button class="btn" onclick="addToCart('Hydrangea', '₹134.99', 'images/G17-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#haory" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Hoary', 'images/G20-removebg-preview.png', '₹127.49')"></button>
+                    <a href="./search.html#haory" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G20-removebg-preview.png" alt="Hoary">
+                </div>
+                <div class="content">
+                    <h3>Hoary</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Hoary', '₹127.49', 'images/G20-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+
+<section class="arrivals" id="arrivals">
+    <h1 class="heading"><span>new arrivals</span></h1>
+    <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#rose" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Rose', 'images/G19.webp', '₹127.49')"></button>
+                    <a href="./search.html#rose" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G19.webp" alt="Rose">
+                </div>
+                <div class="content">
+                    <h3>Rose</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Rose', '₹174.99', 'images/G19.webp')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#dahlia" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Dahlia', 'images/G16-removebg-preview.png', '₹209.99')"></button>
+                    <a href="./search.html#dahlia" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G16-removebg-preview.png" alt="Dahlia">
+                </div>
+                <div class="content">
+                    <h3>Dahlia</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <div class="price">₹209.99 <span>₹279.99</span></div>
+                    <button class="btn" onclick="addToCart('Dahlia', '₹209.99', 'images/G16-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#poppy" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Poppy', 'images/G03-removebg-preview.png', '₹131.24')"></button>
+                    <a href="./search.html#poppy" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G03-removebg-preview.png" alt="Poppy">
+                </div>
+                <div class="content">
+                    <h3>Poppy</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="price">₹131.24 <span>₹174.99</span></div>
+                    <button class="btn" onclick="addToCart('Poppy', '₹131.24', 'images/G03-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#sunflower" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Sunflower', 'images/G04-removebg-preview (1).png', '₹136.24')"></button>
+                    <a href="./search.html#sunflower" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G04-removebg-preview (1).png" alt="Sunflower">
+                </div>
+                <div class="content">
+                    <h3>Sunflower</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="price">₹136.24 <span>₹179.99</span></div>
+                    <button class="btn" onclick="addToCart('Sunflower', '₹136.24', 'images/G04-removebg-preview (1).png')">Add to Cart</button>
+                </div>
+            </div>  
+            
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="./search.html#chrysanthemum" class="fas fa-search"></a>
+                    <button class="fas fa-heart" onclick="addToWishlist('Chrysanthemum', 'images/G10-removebg-preview.png', '₹131.24')"></button>
+                    <a href="./search.html#chrysanthemum" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/G10-removebg-preview.png" alt="Chrysanthemum">
+                </div>
+                <div class="content">
+                    <h3>Chrysanthemum</h3>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star"  id="star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <div class="price">₹131.24 <span>₹174.99</span></div>
+                    <button class="btn" onclick="addToCart('Chrysanthemum', '₹131.24', 'images/G10-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>  
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+
+<section class="deal">
+    <div class="content">
+        <h3>deal of the day! </h3>
+        <h1>upto 35% off</h1>
+        <p>Special blooms for a special day- grab the deal before it fades away!</p>
+        <a href="#featured" class="btn">shop now</a>
+    </div>
+    <div class="image">
+        <img src="images/m2-removebg-preview.png" height="500">
+    </div>
+</section>
+
+
+<section class="more" id="more">
+    <h1 class="heading"><span>browse more flowers</span></h1>
+    <div class="swiper more-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <button class="fas fa-heart" onclick="addToWishlist('Carnation', 'images/G13-removebg-preview.png', '₹127.49')"></button>
+                </div>
+                <div class="image">
+                    <img src="images/G13-removebg-preview.png" alt="Rose">
+                </div>
+                <div class="content">
+                    <h3>Carnation</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Carnation', '₹127.99', 'images/G13-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <button class="fas fa-heart" onclick="addToWishlist('Lotus', 'images/G14-removebg-preview.png', '₹127.49')"></button>
+                </div>
+                <div class="image">
+                    <img src="images/G14-removebg-preview.png" alt="Lotus">
+                </div>
+                <div class="content">
+                    <h3>Lotus</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Lotus', '₹127.49', 'images/G14-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <button class="fas fa-heart" onclick="addToWishlist('Begonia', 'images/G15-removebg-preview.png', '₹127.49')"></button>
+                </div>
+                <div class="image">
+                    <img src="images/G15-removebg-preview.png" alt="Begonia">
+                </div>
+                <div class="content">
+                    <h3>Begonia</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Begonia', '₹127.49', 'images/G15-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <button class="fas fa-heart" onclick="addToWishlist('Lily', 'images/G06-removebg-preview.png', '₹127.49')"></button>
+                </div>
+                <div class="image">
+                    <img src="images/G06-removebg-preview.png" alt="Lily">
+                </div>
+                <div class="content">
+                    <h3>Lily</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Lily', '₹127.49', 'images/G06-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+
+           <div class="swiper-slide box">
+                <div class="icons">
+                    <button class="fas fa-heart" onclick="addToWishlist('Gerbera Daisy', 'images/G07-removebg-preview.png', '₹127.49')"></button>
+                </div>
+                <div class="image">
+                    <img src="images/G07-removebg-preview.png" alt="Gerbera Daisy">
+                </div>
+                <div class="content">
+                    <h3>Gerbera Daisy</h3>
+                    <div class="price">₹127.49 <span>₹169.99</span></div>
+                    <button class="btn" onclick="addToCart('Gerbera Daisy', '₹127.49', 'images/G07-removebg-preview.png')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+          
+
+<section class="swiper reviews" id="reviews">
+    <h1 class="heading"><span>customer's reviews</span></h1>
+    <div class="reviews-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <i class="fas fa-solid fa-user"></i>
+                <h3>Sarah M.</h3>
+                <div class="rating">
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star" id="star"></i>
+                    <i class="fas fa-star" id="star"></i>
+                </div>
+                <p>"I couldn't be happier with my order from Garden Whispers! 
+                The flowers were fresh, vibrant, and beautifully arranged. 
+                The attention to detail was incredible, and 
+                the bouquet lasted much longer than I expected. 
+                Perfect for any occasion!"</p>
+            </div>
+
+        <div class="swiper-slide box">
+            <i class="fas fa-solid fa-user"></i>
+            <h3>Emily R.</h3>
+            <div class="rating">
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star" id="star"></i>
+                <i class="fas fa-star-half-alt" id="star"></i>
+            </div>
+            <p>"I couldn't believe the quality and beauty of the flowers I got for the price. 
+                Garden Whispers has the best deals and the most creative designs. 
+                I'll definitely be ordering again!"
+            </p>
+        </div>
+
+    <div class="swiper-slide box">
+        <i class="fas fa-solid fa-user"></i>
+        <h3>James T.</h3>
+        <div class="rating">
+            <i class="fas fa-star" id="star"></i>
+            <i class="fas fa-star" id="star"></i>
+            <i class="fas fa-star" id="star"></i>
+            <i class="fas fa-star" id="star"></i>
+            <i class="fas fa-star" id="star"></i>
+        </div>
+        <p>"I ordered a bouquet for my wedding anniversary, and 
+            it was beyond perfect! The flowers were fresh, fragrant, and arranged beautifully. 
+            My spouse was thrilled! Thank you, Garden Whispers, for making our day unforgettable."
+        </p>
+    </div>
+
+<div class="swiper-slide box">
+    <i class="fas fa-solid fa-user"></i>
+    <h3>Michael P.</h3>
+    <div class="rating">
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star-half-alt" id="star"></i>
+    </div>
+    <p>"I was amazed at the quality of the flowers for the price! 
+        The arrangement looked like it came straight out of a luxury florist. 
+        I've recommended Garden Whispers to all my friends. Great value for money!" 
+    </p>
+</div>
+
+<div class="swiper-slide box">
+    <i class="fas fa-solid fa-user"></i>
+    <h3>Rachel L.</h3>
+    <div class="rating">
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+        <i class="fas fa-star" id="star"></i>
+    </div>
+    <p>"I had a last-minute request for a custom bouquet, and the team at 
+        Garden Whispers went above and beyond to make it happen. 
+        Their customer service is fantastic, and the flowers turned out stunning.
+        Highly recommend for anyone who loves flowers!
+    </p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>our locations</h3>
+            <div><i class="fas fa-map-marker-alt"></i>kolkata</div>
+            <div><i class="fas fa-map-marker-alt"></i>mumbai</div>
+            <div><i class="fas fa-map-marker-alt"></i>bangaluru</div>
+            <div><i class="fas fa-map-marker-alt"></i>delhi</div>
+            <div><i class="fas fa-map-marker-alt"></i>chennai</div>
+        </div>
+
+        <div class="box">
+            <h3>quick access</h3>
+            <a href="#home"><i class="fas fa-arrow-right"></i>home</a>
+            <a href="#featured"><i class="fas fa-arrow-right"></i>featured</a>
+            <a href="#arrivals"><i class="fas fa-arrow-right"></i>new arrivals</a>
+            <a href="#reviews"><i class="fas fa-arrow-right"></i>reviews</a>
+        </div>
+
+        <div class="box">
+            <h3>more info</h3>
+            <a href="#login-btn"><i class="fas fa-arrow-right"></i>account</a>
+            <a href="./search.html#orders"><i class="fas fa-arrow-right"></i>orders</a>
+            <a href="./search.html#policy"><i class="fas fa-arrow-right"></i>privacy policy</a>
+            <div><i class="fas fa-arrow-right"></i>payment method</div>
+        </div>
+
+        <div class="box" id="contactUs">
+            <h3>contact us</h3>
+            <div><i class="fas fa-phone"></i>+1234567890</div>
+            <div><i class="fas fa-envelope"></i>pandaishika95@gmail.com</div>
+        </div>
+    </div>
+
+        <div class="share">
+            <a href="http://"><i class="fas fa-brands fa-facebook"></i></a>
+            <a href="http://"><i class="fas fa-brands fa-instagram"></i></i></a>
+            <a href="http://"><i class="fas fa-brands fa-twitter"></i></a>
+            <a href="http://"><i class="fas fa-brands fa-pinterest"></i></a>
+        </div>
+
+        <div class="credit">all rights reserved! <i class="fa-regular fa-copyright"></i></div>
+</section>
+
+<script>
+    
+  function addToCart(name, price, image) {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push({ name, price, image });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert(`${name} has been added to your cart!`);
+
+    window.location.href = "./search.html#cart";
+}
+
+function addToWishlist(name, image, price) {
+        const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+        const item = { name, image, price };
+        const exists = wishlistItems.some(w => w.name === name);
+        if (!exists) {
+            wishlistItems.push(item);
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+            alert(`${name} has been added to wishlist!`);
+        }
+        window.location.href = "./search.html#wishlist-container";
+}
+
+function redirectToSlider() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+    const validFlowerIds = [
+        'poppy', 'tulip', 'sunflower', 'chrysanthemum', 'dahlia', 'haory', 
+        'blue orchid', 'rose', 'lavender', 'peony', 'marigold',
+        'gardenia', 'hydrangea', 'lavender'
+    ];
+
+    const formattedInput = searchInput.replace(/\s+/g, ' ').toLowerCase();
+    if (validFlowerIds.includes(formattedInput)) {
+        const targetUrl = `./search.html#${formattedInput}`;
+        window.location.href = targetUrl;
+    } else {
+        alert('Flower not found! Please enter a valid flower name.');
+    }
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
+
