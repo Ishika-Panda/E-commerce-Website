@@ -627,15 +627,22 @@
 </section>
 
 <script>
-    
-  function addToCart(name, price, image) {
+         
+function addToCart(name, price, image) {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    cartItems.push({ name, price, image });
+    const existingItem = cartItems.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity = (existingItem.quantity || 0) + 1; 
+    } else {
+        cartItems.push({ name, price, image, quantity: 1 });
+  }
+
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     alert(`${name} has been added to your cart!`);
-
-    window.location.href = "./search.html#cart";
+    window.location.href = "./search.html#cart-container";
 }
+
 
 function addToWishlist(name, image, price) {
         const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
