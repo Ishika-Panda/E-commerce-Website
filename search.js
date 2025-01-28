@@ -42,41 +42,68 @@ var swiper = new Swiper(".about-slider", {
   });
 
 
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-  const Cartcontainer = document.getElementById('cart-container');
+const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+const Cartcontainer = document.getElementById('cart-container');
 
-  function renderCart() {
-    Cartcontainer.innerHTML = ''; 
+function renderCart() {
+    Cartcontainer.innerHTML = '';
 
-      if (cartItems.length === 0) {
-        Cartcontainer.innerHTML = '<p>looks like you have no items in your cart!</p>';
-          return;
-      }
+    if (cartItems.length === 0) {
+        Cartcontainer.innerHTML = '<p>Looks like you have no items in your cart!</p>';
+        return;
+    }
 
-      cartItems.forEach((item, index) => {
-          const div = document.createElement('div');
-          div.classList.add('item');
-          div.innerHTML = `
-              <img src="${item.image}" alt="${item.name}">
-              <div>
-                  <p>Name:  ${item.name} <br/> Price: ${item.price}</p>
-              </div>
-              <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
-          `;
-          Cartcontainer.appendChild(div);
-      });
-  }
+    cartItems.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('item');
+        div.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div>
+                <p>Name: ${item.name} <br/> Price: ${item.price} <br/> Quantity: ${item.quantity || 1} </p>
+                <button class="decrease-btn" onclick="changeQuantity(${index}, -1)">-</button>
+                <button class="increase-btn" onclick="changeQuantity(${index}, 1)">+</button>
+                
+            </div>
+            <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        `;
+        Cartcontainer.appendChild(div);
+    });
+}
 
-  function removeFromCart(index) {
-      cartItems.splice(index, 1); 
-      localStorage.setItem('cartItems', JSON.stringify(cartItems)); 
-      renderCart();
-  }
+function changeQuantity(index, delta) {
+    cartItems[index].quantity += delta;
 
-  renderCart();
+    if (cartItems[index].quantity <= 0) {
+        cartItems.splice(index, 1);
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    renderCart();
+}
+
+function removeFromCart(index) {
+    cartItems.splice(index, 1); 
+    localStorage.setItem('cartItems', JSON.stringify(cartItems)); 
+    renderCart(); 
+}
+
+renderCart();
+
 
 const wishlistContainer = document.getElementById('wishlist-container');
 const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+
+function addToWishlist(name, price, image) {
+    const existingItem = wishlistItems.find(item => item.name === name);
+
+    if (existingItem) {
+        alert(`${name} is already in your wishlist!`);
+    } else {
+        wishlistItems.push({ name, price, image });
+        localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+        alert(`${name} has been added to your wishlist!`);
+    }
+    renderWishlist();
+}
 
 function renderWishlist() {
     wishlistContainer.innerHTML = '';
@@ -91,7 +118,7 @@ function renderWishlist() {
         div.classList.add('wishlist-item');
         div.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
-                <p>Name:  ${item.name} <br/> Price: ${item.price}</p>
+            <p>Name: ${item.name} <br/> Price: ${item.price}</p>
             <button class="remove-btn" onclick="removeFromWishlist(${index})">Remove</button>
         `;
         wishlistContainer.appendChild(div);
@@ -99,12 +126,14 @@ function renderWishlist() {
 }
 
 function removeFromWishlist(index) {
-    wishlistItems.splice(index, 1);
-    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
-    renderWishlist();
+    wishlistItems.splice(index, 1); 
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems)); 
+    renderWishlist(); 
 }
 
 renderWishlist();
+
+
 
 const ordersContainer = document.getElementById('orders-container');
 const orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
